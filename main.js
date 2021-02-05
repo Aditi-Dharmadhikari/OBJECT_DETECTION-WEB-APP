@@ -46,7 +46,7 @@ function draw(){
             g = random(255);
             b = random(255);
 
-            object.detect(img , gotCocossd);
+            object.detect(video , gotCocossd);
 
             document.getElementById("status").innerHTML = "Status: Object Detect";
             document.getElementById("object_detected").innerHTML = "Number of objects detected : " + array.length;

@@ -1,11 +1,7 @@
-img = "";
+
 status = "";
 array = [];
 
-function preload(){
-    img = loadImage("dog_cat.jpg");
-
-}
 
 function setup(){
     canvas = createCanvas(380 , 350);
@@ -49,7 +45,7 @@ function draw(){
             object.detect(video , gotCocossd);
 
             document.getElementById("status").innerHTML = "Status: Object Detect";
-            document.getElementById("object_detected").innerHTML = "Number of objects detected : " + array.length;
+            document.getElementById("objects_detected").innerHTML = "Number of objects detected : " + array.length;
          fill(r,g,b);
          percent = floor(array[i].confidence * 100);
          text(array[i].label + percent + " % " , array[i].x +12, array[i].y +12);
